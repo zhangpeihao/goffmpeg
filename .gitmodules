@@ -1,0 +1,6 @@
+[submodule "ffmpeg"]
+	path = ffmpeg
+	url = git://source.ffmpeg.org/ffmpeg.git
+[submodule "vo-aacenc"]
+	path = vo-aacenc
+	url = git://opencore-amr.git.sourceforge.net/gitroot/opencore-amr/vo-aacenc
