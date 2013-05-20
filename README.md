@@ -28,6 +28,6 @@ In testing...
 ## Installation
 
 	git clone https://github.com/zhangpeihao/goffmpeg.git goffmpeg
-	cd ffmpeg
+	cd goffmpeg
 	./build.sh
 
