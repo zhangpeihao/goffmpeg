@@ -27,7 +27,7 @@ typedef struct context {
 
 static struct context* g_contexts;
 static int             g_max;
-extern void onReceivedData(int id, int64_t pts, int64_t dts, void* data, int size);
+extern void onReceivedData(int id, int flags, int64_t pts, int64_t dts, void* data, int size);
 
 struct context* GetContextByID(int id) {
 	if(id <= 0 || id >g_max) {
@@ -112,7 +112,7 @@ void ffmpeg_readloop(int id) {
 	}
 
 	while(av_read_frame(c->pFormatCtx, &packet) >= 0) {
-		onReceivedData(id, packet.pts, packet.dts, packet.data, packet.size);
+		onReceivedData(id, packet.flags, packet.pts, packet.dts, packet.data, packet.size);
 		av_free_packet(&packet);
 	}
 }
