@@ -41,13 +41,17 @@ cd ffmpeg
 	--enable-memalign-hack \
 	--enable-libvo-aacenc \
 	--enable-protocol=tcp \
+	--enable-protocol=file \
 	--enable-hwaccel=h264_vaapi \
 	--enable-hwaccel=h264_vaapi \
 	--enable-hwaccel=h264_dxva2 \
 	--enable-demuxer=h264 \
+	--enable-muxer=h264 \
 	--enable-decoder=h264 \
+	--enable-encoder=h264 \
 	--enable-parser=h264 \
 	--enable-decoder=aac \
+	--enable-encoder=aac \
 	--enable-decoder=flv \
 	--enable-encoder=flv \
 	--enable-demuxer=flv \
